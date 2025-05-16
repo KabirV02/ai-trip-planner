@@ -7,7 +7,7 @@ const PlaceToVisit = ({ trip }) => {
 
     return (
         <div className='mt-10'>
-            <h2 className='text-2xl font-bold'>Places To Visit</h2>
+            <h2 className=' text-center text-2xl md:text-3xl font-bold'>Places To Visit</h2>
             {
                 trip?.tripData?.travelPlan?.itinerary.map((curr, idx) => (
                     <div key={idx} className='m-3 flex flex-col gap-2'>
