@@ -65,10 +65,10 @@ const Header = () => {
 
   return (
     <div>
-      <div className='px-3 flex justify-between items-center '>
+      <div className='px-3 flex justify-between items-center ml-2 mr-2 mt-3  '>
 
       <Link to={'/'}>
-        <div className='hero text-3xl font-extrabold m-4 '>
+        <div className='hero text-2xl md:text-3xl font-extrabold md:m-3 '>
          <h2><span className='text-orange-400'>TRIP</span> PLANNER</h2>
 
         </div>
@@ -100,7 +100,7 @@ const Header = () => {
 
             </div> : <Button onClick={()=>{
               setDialog(true)
-            }}>Sign Up</Button>
+            }} className='h-[35px] md:w-[82px] md:h-[40px] hover:bg-orange-400 transition-all hover:text-white  hover:scale-105'>Sign Up</Button>
 
         }
 
@@ -114,11 +114,11 @@ const Header = () => {
                     <DialogHeader>
 
                         <DialogDescription>
-                            <div className='hero text-3xl font-extrabold'>
+                            <div className='hero text-2xl md:text-3xl font-extrabold'>
                                 <h2 className='text-black'><span className='text-orange-400'>TRIP</span> PLANNER</h2>
                                 </div>
                           
-                            <h2 className="font-bold text-2xl mt-2">Sign In with Google</h2>
+                            <h2 className=" font-semibold md:font-bold text-xl md:text-2xl mt-2">Sign In with Google</h2>
                             <p>Sign in to the App with Google authentication securely</p>
                             
                             <Button

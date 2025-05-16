@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')).render(
   <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_AUTH_ID}>
        <BrowserRouter>
     <Header />
-    <hr />
+    
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/create-trip" element={<CreateTrip />} />

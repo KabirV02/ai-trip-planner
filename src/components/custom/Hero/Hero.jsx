@@ -13,20 +13,20 @@ const Hero = () => {
 
       <div className='mx-54 flex flex-col items-center gap-8'>
 
-        <h1 className='text-[50px]  font-bold text-center mt-16'>
+        <h1 className='text-[18px] md:text-[50px]  font-bold text-center mt-10 md:mt-16'>
           <span className='text-orange-400'>Discover Your Next Adventure with AI:</span>
           <p>Personalized Itineraries at Your Fingertips</p>
         </h1>
-        <p className='mt-4 text-lg font-semibold text-center text-gray-600'>Your Personal Trip Planner and travel curator,creating itineraries tailored to your intrests and budget</p>
+        <p className='mt-4 text-[14px] font-sm md:font-semibold text-center text-gray-600'>Your Personal Trip Planner and travel curator,creating itineraries tailored to your intrests and budget</p>
         <Link to={'/create-trip'}>
-          <Button className='p-7 text-xl font-bold hover:bg-orange-400 transition-all'>Start Exploring ✈️</Button>
+          <Button className='p-3 text-lg md:p-7 md:text-xl font-bold hover:bg-orange-400 transition-all'>Start Exploring ✈️</Button>
         </Link>
 
         <div className='w-full mt-4 p-3 grid gap-4'>
 
           <div className=' grid grid-cols-1  p-5'>
             
-            <img src={landing1} alt="" className='h[500px] w-[600px] object-cover rounded-lg ' />
+            <img src={landing1} alt="" className=' md:h[500px] md:w-[600px] object-cover rounded-lg ' />
             
           </div>
           <div className=' grid grid-cols-1 justify-items-end '>
