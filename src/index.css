@@ -24,7 +24,9 @@
   background-color: #b45309; /* darker amber */
 }
 
-
+.nameshadow{
+   text-shadow: 0px 10px 60px rgb(160, 82, 82);
+}
 
 .hotel-card {
   transition: all 0.3s ease;

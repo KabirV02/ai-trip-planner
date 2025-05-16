@@ -58,7 +58,7 @@ const CreateTrip = () => {
 
 
 
-        if (formData?.noOfDays > 5) {
+        if (formData?.noOfDays > 10) {
             toast.error("Please Enter Days less than 5");
             return;
         } else if (!formData?.location || !formData?.budget || !formData?.traveler) {
@@ -138,12 +138,12 @@ const CreateTrip = () => {
     }
 
     return (
-        <div className='mt-5 px-[300px]'>
+        <div className='md:mt-5 p-[20px] md:px-[300px]'>
 
             {/* Preference Section */}
             <div className='mb-7'>
-                <h1 className='text-[40px] pt-[30px] font-bold'>Tell us your travel preferences 🏕️🏝️</h1>
-                <p className='text-gray-600 mt-2'>
+                <h1 className='text-[20px]  md:text-[40px] md:pt-[30px] font-bold'>Tell us your travel preferences 🏕️🏝️</h1>
+                <p className='text-gray-600 mt-2 text-[15px] md:text-[20px]'>
                     Just provide some basic information, and our trip planner will generate a customized itinerary based on your preferences.
                 </p>
             </div>
@@ -151,8 +151,8 @@ const CreateTrip = () => {
             {/* Destination Choice */}
             <div className="mt-5 flex flex-col gap-6">
                 <div>
-                    <h2 className='text-black text-lg font-bold mt-[40px]'>What is your destination of choice?</h2>
-                    <div className="text-xl">
+                    <h2 className='text-black md:text-xl  font-bold mt-[40px]'>What is your destination of choice?</h2>
+                    <div className=" md:text-xl">
                         <GooglePlacesAutocomplete
                             apiKey={import.meta.env.VITE_GOOGLE_PLACE_API_KEY}
                             selectProps={{
@@ -168,8 +168,8 @@ const CreateTrip = () => {
 
                 {/* Days Planning */}
                 <div className='font-bold '>
-                    <h2 className='text-black text-2xl font-bold mt-[40px]'>How many days are you plannig your trip</h2>
-                    <Input placeholder="3 Days" type="number"
+                    <h2 className='text-black md:text-xl  mt-[40px]'>How many days are you plannig your trip?</h2>
+                    <Input placeholder="Enter between 1-10 Days" type="number"
                         onChange={(e) => {
                             dataHandler('noOfDays', e.target.value)
                         }} />
@@ -177,14 +177,14 @@ const CreateTrip = () => {
             </div>
             {/* Budget Planning */}
             <div>
-                <h2 className='text-black text-2xl font-bold mt-[40px]'>What is your Budget</h2>
-                <div className='grid grid-cols-3 gap-6 items-center mt-3'>
+                <h2 className='text-black text-lg md:text-2xl font-bold mt-[40px]'>What is your Budget?</h2>
+                <div className='grid md:grid-cols-3 gap-2  md:gap-6 items-center mt-3'>
                     {SelectBudgetOptions.map((item) => (
                         <div key={item.id}
                             onClick={() => dataHandler('budget', item.title)}
-                            className={`border rounded-lg p-3 cursor-pointer hover:shadow-lg hover:scale-105  transition-all
+                            className={` w-full h-[100px] md:w-[250px] md:h-[110px]  border rounded-lg p-3 cursor-pointer hover:shadow-lg hover:scale-105  transition-all
                         ${formData?.budget === item.title && 'border-black scale-105'}`}>
-                            <h2 className='text-3xl'>{item.icon}</h2>
+                            <h2 className='text-xl md:text-3xl'>{item.icon}</h2>
                             <h2 className='font-bold text-xl'>{item.title}</h2>
                             <h2 className='text-sm text-gray-500'>{item.desc}</h2>
                         </div>
@@ -195,14 +195,14 @@ const CreateTrip = () => {
 
             {/* TravelLists */}
             <div>
-                <h2 className='text-black text-2xl font-bold mt-[40px]'>Who do you plan on travelling with on your next adevntur?e</h2>
-                <div className='grid grid-cols-3 gap-6 items-center mt-3'>
+                <h2 className='text-black text-xl md:text-2xl font-bold mt-[40px]'>Who do you plan on travelling with on your next adevntur?e</h2>
+                <div className='grid md:grid-cols-3 gap-6 items-center mt-3'>
                     {SelectTravelLists.map((item) => (
                         <div key={item.id}
                             onClick={() => dataHandler('traveler', item.people)}
-                            className={`border rounded-lg p-3 cursor-pointer hover:shadow-lg hover:scale-105  transition-all
+                            className={`w-full h-[100px] md:w-[250px] md:h-[110px] border rounded-lg p-3 cursor-pointer hover:shadow-lg hover:scale-105  transition-all
                         ${formData?.traveler === item.people && 'border-black scale-105'}`}>
-                            <h2 className='text-3xl'>{item.icon}</h2>
+                            <h2 className=' text-xl md:text-3xl'>{item.icon}</h2>
                             <h2 className='font-bold text-xl'>{item.title}</h2>
                             <h2 className='text-sm text-gray-500'>{item.desc}</h2>
                         </div>

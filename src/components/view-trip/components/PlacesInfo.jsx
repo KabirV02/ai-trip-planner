@@ -44,14 +44,14 @@ const PlacesInfo = ({plans}) => {
 
    
   return (
-    <div className='hotel-card p-3 border rounded-lg flex gap-3'>
+    <div className='hotel-card p-3 border rounded-lg flex flex-col md:flex-row gap-3'>
       <div>
         <img src={photoUrl?photoUrl:viewbg} className='h-[200px] w-[400px]  object-cover rounded-lg' referrerPolicy="no-referrer" />
       </div>
       <div>
         <h2 className='font-bold text-lg'>{plans?.placeName}</h2>
         <p className='font-sm'>{plans?.placeDetails}</p>
-        <p className='text-orange-500 font-semibold'>🕙 {plans?.timeToTravel ? plans?.timeToTravel : null}</p>
+        <p className='text-orange-500 font-semibold'>🕙 {plans?.timeToTravel!=='N/A' ? plans?.timeToTravel : 'No Time Available'}</p>
       
         
       </div>

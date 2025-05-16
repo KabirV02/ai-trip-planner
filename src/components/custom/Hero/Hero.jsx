@@ -11,13 +11,13 @@ const Hero = () => {
   return (
     <>
 
-      <div className='mx-54 flex flex-col items-center gap-8'>
+      <div className='m-0 md:mx-54 flex flex-col flex-wrap items-center gap-8'>
 
-        <h1 className='text-[18px] md:text-[50px]  font-bold text-center mt-10 md:mt-16'>
+        <h1 className='text-[30px] md:text-[50px] font-bold text-center mt-10 md:mt-16'>
           <span className='text-orange-400'>Discover Your Next Adventure with AI:</span>
-          <p>Personalized Itineraries at Your Fingertips</p>
+          <p className='font-semibold'>Personalized Itineraries at Your Fingertips</p>
         </h1>
-        <p className='mt-4 text-[14px] font-sm md:font-semibold text-center text-gray-600'>Your Personal Trip Planner and travel curator,creating itineraries tailored to your intrests and budget</p>
+        <p className='mt-4 text-[12px] font-sm md:font-semibold text-center text-gray-600'>Your Personal Trip Planner and travel curator,creating itineraries tailored to your intrests and budget</p>
         <Link to={'/create-trip'}>
           <Button className='p-3 text-lg md:p-7 md:text-xl font-bold hover:bg-orange-400 transition-all'>Start Exploring ✈️</Button>
         </Link>

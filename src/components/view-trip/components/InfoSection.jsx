@@ -28,7 +28,7 @@ const InfoSection = ({ trip }) => {
       }
 
       // Use the first photo for reliability
-      const photoName = place.photos[5].name
+      const photoName = place.photos[3].name
       const fullPhotoUrl = BASE_PHOTO_URL.replace('{NAME}', photoName)
       console.log("✅ Google Photo URL:", fullPhotoUrl)
 
@@ -47,21 +47,21 @@ const InfoSection = ({ trip }) => {
     
     return (
         <div>
-            <img src={photoUrl} className='h-[440px] w-[950px] object-cover rounded-lg'  referrerPolicy="no-referrer" alt="" />
-            <div className='flex justify-between items-center p-2'>
-                <div className='my-3 flex flex-col gap-2'>
-                    <h2 className='font-bold text-3xl'>{trip?.userSelection?.location?.label}</h2>
-                    <div className='flex gap-2'>
-                        <h2 className='p-1 px-3 bg-gray-200 rounded-full text-lg text-gray-500'>🗓️ {trip?.userSelection?.noOfDays} Days</h2>
-                        <h2 className='p-1 px-3 bg-gray-200 rounded-full text-lg text-gray-500'>💰 {trip?.userSelection?.budget} Budget</h2>
-                        <h2 className='p-1 px-3 bg-gray-200 rounded-full text-lg text-gray-500'>🍷 No of Travelers: {trip?.userSelection?.traveler} </h2>
+            <img src={photoUrl} className='h-[340px] w-[950px] object-cover rounded-lg'  referrerPolicy="no-referrer" alt="" />
+            <div className='flex flex-col md:flex-row  md:justify-between items-center p-2'>
+                <div className='my-3 w-full flex flex-col  gap-2'>
+                    <h2 className='font-bold text-xl md:text-3xl'>{trip?.userSelection?.location?.label}</h2>
+                    <div className='flex flex-col md:flex-row gap-2'>
+                        <h2 className='p-1 px-3 bg-gray-200 rounded-full md:text-lg text-gray-500'>🗓️ {trip?.userSelection?.noOfDays} Days</h2>
+                        <h2 className='p-1 px-3 bg-gray-200 rounded-full md:text-lg text-gray-500'>💰 {trip?.userSelection?.budget} Budget</h2>
+                        <h2 className='md:p-1 px-3 bg-gray-200 rounded-full md:text-lg text-gray-500'>🍷 No of Travelers: {trip?.userSelection?.traveler} </h2>
                     </div>
 
 
                 </div>
                         <div >
                             <Link to={'https://www.google.com/maps/search/?api=1&query='+trip?.tripData?.travelPlan?.location } target='_blank'>
-                            <Button className='h-12 w-12  hover:bg-orange-400 hover:scale-105 transition-all'><IoIosSend className='text-2xl'/></Button>
+                            <Button className='h-12 w-40 md:w-12  text-2xl hover:bg-orange-400 hover:scale-105 transition-all'><IoIosSend/></Button>
                             </Link>
                         </div>
             </div>

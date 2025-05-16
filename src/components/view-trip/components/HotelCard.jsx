@@ -44,9 +44,9 @@ const HotelCard = ({info}) => {
             
             <div  className='hotel-card rounded-lg p-4 transition-all hover:scale-110'>
                 
-                <img src={photoUrl} alt=""className='rounded-lg h-[300px] w-full  object-cover' referrerPolicy="no-referrer"/>
+                <img src={photoUrl} alt=""className='rounded-lg h-full w-full md:h-[300px]   object-cover' referrerPolicy="no-referrer"/>
                   <div className='mt-2 flex flex-col gap-2 h-fit '>
-                    <h2 className='text-xl font-medium'>{info?.hotelName}</h2>
+                    <h2 className=' text-lg md:text-xl font-medium'>{info?.hotelName}</h2>
                     <h2 className='text-sm text-gray-600'>📍 {info?.hotelAddress}</h2>
                     <h2 className='font-semibold'>💰 {info?.price}</h2>
                     <h2 className='font-semibold'>⭐ {info?.rating}</h2>

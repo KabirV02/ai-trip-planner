@@ -43,8 +43,8 @@ const MyTripCard = ({trip}) => {
   }, [trip])
 
   return (
-    <Link to={'/view-trip/'+trip?.id} className='mt-4 hotel-card hover:scale-105 rounded-lg transition-all'>
-        <div className=' flex flex-col items-center  h-fit  m-4'>
+    <Link to={'/view-trip/'+trip?.id} className=' md:h-fit mt-4 hotel-card hover:scale-105 rounded-lg transition-all'>
+        <div className='flex flex-col items-center  h-fit  m-4'>
             <img src={photoUrl?photoUrl:viewbg} alt="" className='object-cover rounded-lg h-[400px] w-[600px]' referrerPolicy='no-referrer'/>
             <div className='w-full'>
                 <h2 className='text-xl font-bold'>{trip?.userSelection?.location?.label}</h2>

@@ -35,13 +35,13 @@ const MyTrips = () => {
     }, [])
 
     return (
-        <div className='  p-4'>
+        <div className='p-4'>
             <h2 className=' text-center text-3xl p-[30px] font-bold'>My Trips</h2>
-            <div className='grid grid-cols-2 md:grid-cols-3 gap-3'>
+            <div className='h-[30px] md:h-fit grid grid-cols-1 md:grid-cols-3 gap-3'>
                 {userTrips.length>0?userTrips.map((trip,idx)=>(
                     <MyTripCard key={idx} trip={trip}/>
                 )):[1,2,3,4,5,6].map((item,index)=>(
-                    <div key={index} className='h-[400px] w-[400px] bg-gray-300 rounded-xl animate-pulse'>
+                    <div key={index} className='md:h-[400px] md:w-[400px] bg-gray-300 rounded-xl animate-pulse'>
                         
                     </div>
                 ))
