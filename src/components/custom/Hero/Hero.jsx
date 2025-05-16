@@ -15,7 +15,7 @@ const Hero = () => {
 
         <h1 className='text-[30px] md:text-[50px] font-bold text-center mt-10 md:mt-16'>
           <span className='text-orange-400'>Discover Your Next Adventure with AI:</span>
-          <p className='font-semibold'>Personalized Itineraries at Your Fingertips</p>
+          <p className=' font-semibold md:font-bold'>Personalized Itineraries at Your Fingertips</p>
         </h1>
         <p className='mt-4 text-[12px] font-sm md:font-semibold text-center text-gray-600'>Your Personal Trip Planner and travel curator,creating itineraries tailored to your intrests and budget</p>
         <Link to={'/create-trip'}>
