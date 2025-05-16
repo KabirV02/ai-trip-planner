@@ -12,7 +12,7 @@ const MyTrips = () => {
 
     const getTripData = async () => {
         const user = JSON.parse(localStorage.getItem('user'))
-        console.log(user)
+        
         if (!user) {
             navigate('/')
             return

@@ -25,7 +25,7 @@ const HotelCard = ({info}) => {
       // Use the first photo for reliability
       const photoName = place.photos[0].name
       const fullPhotoUrl = BASE_PHOTO_URL.replace('{NAME}', photoName)
-      console.log("✅ Google Photo URL:", fullPhotoUrl)
+      
 
       setPhotoUrl(fullPhotoUrl)
     } catch (error) {

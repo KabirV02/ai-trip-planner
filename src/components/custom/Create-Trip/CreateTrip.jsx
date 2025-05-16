@@ -43,7 +43,7 @@ const CreateTrip = () => {
 
 
     useEffect(() => {
-        console.log(formData)
+        
     }, [formData])
 
     const generatripHandler = async () => {
@@ -72,7 +72,7 @@ const CreateTrip = () => {
             .replace('{budget}', formData?.budget || 'Unknown Budget')
             .replace('{traveler}', formData?.traveler || 'Unknown Traveler');
 
-        console.log("Generated Prompt:", FINAL_PROMPT);
+        
 
 
 
@@ -86,7 +86,7 @@ const CreateTrip = () => {
         try {
             const results = await generateTravelPlan(contents); // Call the function from AIModel.jsx
 
-            console.log(" AI Travel Plan Response:", results); // Log the response to the console
+           // Log the response to the console
             saveAiTripData(results)
             setLoading(false)
 
@@ -98,7 +98,7 @@ const CreateTrip = () => {
 
     const saveAiTripData = async (TripData) => {
 
-        console.log("Raw AI Response:", TripData);
+       
         const user = JSON.parse(localStorage.getItem('user'))
         const docId = Date.now().toString();
         await setDoc(doc(db, "AITrips", docId), {
@@ -128,7 +128,7 @@ const CreateTrip = () => {
                 }
             }
         ).then((res) => {
-            console.log(res)
+            
             localStorage.setItem('user', JSON.stringify(res?.data))
             setDialog(false)
             toast.success("Login Success")

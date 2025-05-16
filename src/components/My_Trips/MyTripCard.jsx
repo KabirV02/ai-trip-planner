@@ -8,7 +8,7 @@ const MyTripCard = ({trip}) => {
    const [photoUrl, setPhotoUrl] = useState([])
    const GetPhotos = async () => {
      const textQuery = trip?.userSelection?.location?.label
-     console.log(textQuery)
+     
 
     if (!textQuery) {
       console.warn("🚫 No location label found. Skipping API call.")
@@ -27,7 +27,7 @@ const MyTripCard = ({trip}) => {
       // Use the first photo for reliability
       const photoName = place.photos[0].name
       const fullPhotoUrl = BASE_PHOTO_URL.replace('{NAME}', photoName)
-      console.log("✅ Google Photo URL:", fullPhotoUrl)
+    
 
       setPhotoUrl(fullPhotoUrl)
     } catch (error) {
@@ -36,7 +36,7 @@ const MyTripCard = ({trip}) => {
   }
 
   useEffect(() => {
-    console.log(trip)
+    
     if (trip?.userSelection?.location?.label) {
       GetPhotos()
     }

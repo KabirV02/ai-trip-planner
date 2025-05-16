@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 const InfoSection = ({ trip }) => {
   const [photoUrl, setPhotoUrl] = useState("")
-  console.log(trip)
+  
   const GetPhotos = async () => {
     const textQuery = trip?.userSelection?.location?.label?.trim()
 
@@ -30,7 +30,7 @@ const InfoSection = ({ trip }) => {
       // Use the first photo for reliability
       const photoName = place.photos[3].name
       const fullPhotoUrl = BASE_PHOTO_URL.replace('{NAME}', photoName)
-      console.log("✅ Google Photo URL:", fullPhotoUrl)
+      
 
       setPhotoUrl(fullPhotoUrl)
     } catch (error) {

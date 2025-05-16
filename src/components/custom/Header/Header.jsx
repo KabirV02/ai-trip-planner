@@ -47,7 +47,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    console.log(user)
+   
   }, [])
 
   const mobileMenu = (
