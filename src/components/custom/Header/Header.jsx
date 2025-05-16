@@ -99,10 +99,10 @@ const Header = () => {
           </button>
           {menuOpen && mobileMenu}
         </div>:
-        <Button onClick={() => {
+        <Button  onClick={() => {
           setDialog(true)
           setMenuOpen(false)
-        }} className='w-13 md:w-full'>Sign Up</Button>
+        }} className='w-13 md:hidden'>Sign Up</Button>
 }
 
         <div className='hidden md:flex items-center gap-3'>
@@ -135,7 +135,7 @@ const Header = () => {
               </Popover>
             </>
           ) : (
-            <Button onClick={() => setDialog(true)} className='hover:bg-orange-400 hover:scale-105 transition-all'>Sign Up</Button>
+            <Button onClick={() => setDialog(true)} className=' hover:bg-orange-400 hover:scale-105 transition-all'>Sign Up</Button>
           )}
         </div>
       </div>
