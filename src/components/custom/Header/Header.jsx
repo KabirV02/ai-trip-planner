@@ -92,12 +92,18 @@ const Header = () => {
           </div>
         </Link>
 
-        <div className='md:hidden'>
+        {user?<div className='md:hidden'>
+          
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <IoClose size={30} /> : <HiMenuAlt3 size={30} />}
           </button>
           {menuOpen && mobileMenu}
-        </div>
+        </div>:
+        <Button onClick={() => {
+          setDialog(true)
+          setMenuOpen(false)
+        }} className='w-13 md:w-full'>Sign Up</Button>
+}
 
         <div className='hidden md:flex items-center gap-3'>
           {user ? (
