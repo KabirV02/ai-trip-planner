@@ -1,0 +1,9 @@
+AI TRIP PLANNER 
+
+Ideas:
+
+1. Adding category of budget add all types of budget
+2. Addd vehicles service.
+3. Currency Acc. to Country like $ Rs pond etc
+4. Live Location share on web along itinraray.
+5. Create Trip using voice
