@@ -27,11 +27,10 @@ const ViewTrip = () => {
   }
   useEffect(()=>{
     tripId && getDocData()
-    window.scrollTo(0,0)
   },[tripId])
 
   return (
-    <div className='w-fit p-5 md:p-10  md:px-20 lg:px-42 xl:px-[280px]'>
+    <div className='md:w-fit p-5 md:p-10  md:px-20 lg:px-42 xl:px-[280px]'>
       {/* Infromation  */}
       <InfoSection trip={tripData}/>
       {/* Recommendation of Hotels */}
