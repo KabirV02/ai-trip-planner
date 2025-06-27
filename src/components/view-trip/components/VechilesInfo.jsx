@@ -12,10 +12,10 @@ const VechilesInfo = ({ trip }) => {
                     return (
 
                         // console.log(curr)
-                        <div key={idx} className='mt-5 mb-5'>
+                        <div key={idx} className='mt-5 mb-5 w-full'>
                              
                             <p className='text-3xl text-orange-500 font-bold'>{curr?.type}s</p>
-                            <div className='w-fit md:flex  justify-start  gap-5 h-fit shadow-black'>
+                            <div className='w-full md:flex   justify-start  gap-5 h-fit shadow-black'>
                                 {
                                     curr?.vechile?.map((item, idx) => (
                                         <div key={idx}>

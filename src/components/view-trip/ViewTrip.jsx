@@ -27,6 +27,7 @@ const ViewTrip = () => {
   }
   useEffect(()=>{
     tripId && getDocData()
+    window.scrollTo(0,0)
   },[tripId])
 
   return (
