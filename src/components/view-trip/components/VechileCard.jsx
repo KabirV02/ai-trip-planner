@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { BASE_PHOTO_URL, GetPlaceDetails } from './GlobalAPI'
-import bike from '../../../assets/bike.jpg'
-import car from '../../../assets/car.jpeg'
+
 
 
 
 const VechileCard = ({ vechileInfo,tripData }) => {
 
-    // console.log(tripData?.userSelection?.location?.label)
-    // console.log(vechileInfo?.name)
+  
 
     const [photoUrl, setPhotoUrl] = useState("")
 
