@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BASE_PHOTO_URL, GetPlaceDetails } from './GlobalAPI'
-const HotelCard = ({info}) => {
+import { Button } from '@/components/ui/button'
+import { IoIosSend } from 'react-icons/io'
+const HotelCard = ({ info }) => {
 
-    const [photoUrl, setPhotoUrl] = useState("")
-     
+  const [photoUrl, setPhotoUrl] = useState("")
+
   const GetPhotos = async () => {
     const textQuery = info?.hotelName
 
@@ -25,7 +27,7 @@ const HotelCard = ({info}) => {
       // Use the first photo for reliability
       const photoName = place.photos[0].name
       const fullPhotoUrl = BASE_PHOTO_URL.replace('{NAME}', photoName)
-      
+
 
       setPhotoUrl(fullPhotoUrl)
     } catch (error) {
@@ -40,19 +42,20 @@ const HotelCard = ({info}) => {
   }, [info])
 
   return (
-     <Link to={'https://www.google.com/maps/search/?api=1&query='+info?.hotelAddress} target='_blank'>
-            
-            <div  className='hotel-card rounded-lg p-4 transition-all hover:scale-110'>
-                
-                <img src={photoUrl} alt=""className='rounded-lg h-full w-full md:h-[300px]   object-cover' referrerPolicy="no-referrer"/>
-                  <div className='mt-2 flex flex-col gap-2 h-fit '>
-                    <h2 className=' text-lg md:text-xl font-medium'>{info?.hotelName}</h2>
-                    <h2 className='text-sm text-gray-600'>📍 {info?.hotelAddress}</h2>
-                    <h2 className='font-semibold'>💰 {info?.price}</h2>
-                    <h2 className='font-semibold'>⭐ {info?.rating}</h2>
-                  </div>
-                </div>
-        </Link>
+    <Link to={'https://www.google.com/maps/search/?api=1&query=' + info?.hotelAddress} target='_blank'>
+
+      <div className='hotel-card rounded-lg p-6 md:p-4 transition-all hover:scale-100 md:hover:scale-110'>
+
+        <img src={photoUrl} alt="" className='rounded-lg h-full w-full md:h-[300px]   object-cover' referrerPolicy="no-referrer" />
+        <div className='mt-2 flex flex-col gap-2 h-fit '>
+          <h2 className=' text-lg md:text-xl font-medium'>{info?.hotelName}</h2>
+          <h2 className='text-sm text-gray-600'>📍 {info?.hotelAddress}</h2>
+          <h2 className='font-semibold'>💰 {info?.price}</h2>
+          <h2 className='font-semibold'>⭐ {info?.rating}</h2>
+        </div>
+        <Button className='relative left-[230px] md:left-[165px] h-12  md:w-15   text-2xl hover:bg-orange-400  hover:scale-105 transition-all'><IoIosSend /></Button>
+      </div>
+    </Link>
   )
 }
 

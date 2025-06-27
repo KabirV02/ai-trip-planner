@@ -7,3 +7,4 @@ Ideas:
 3. Currency Acc. to Country like $ Rs pond etc
 4. Live Location share on web along itinraray.
 5. Create Trip using voice
+6. Community  where people chat and suggest for good places

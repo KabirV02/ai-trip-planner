@@ -6,6 +6,7 @@ import { useState } from 'react'
 import InfoSection from './components/InfoSection'
 import HotelInfo from './components/HotelInfo'
 import PlaceToVisit from './components/PlaceToVisit'
+import VechilesInfo from './components/VechilesInfo'
 const ViewTrip = () => {
 
   const {tripId} = useParams()
@@ -36,6 +37,8 @@ const ViewTrip = () => {
       <HotelInfo trip={tripData}/>
       {/* Days Plans or Itinary */}
       <PlaceToVisit trip={tripData}/>
+      {/* Vechiles info */}
+      <VechilesInfo trip={tripData}/>
        {/* Footer */}
     </div>
   )
