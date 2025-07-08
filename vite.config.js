@@ -9,4 +9,12 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // ✅ ADD THIS FOR REACT ROUTER SUPPORT
+  build: {
+    outDir: "dist",
+  },
+  server: {
+    // This ensures proper fallback during dev
+    historyApiFallback: true,
+  },
 })
