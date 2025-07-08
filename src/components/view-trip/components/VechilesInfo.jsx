@@ -14,7 +14,7 @@ const VechilesInfo = ({ trip }) => {
                         // console.log(curr)
                         <div key={idx} className='mt-5 mb-5'>
                              
-                            <p className='text-3xl text-orange-500 font-bold'>{curr?.type}s</p>
+                            <p className='text-3xl text-orange-500 font-bold'>{curr?.type}</p>
                             <div className='md:flex  justify-start  gap-5 h-fit '>
                                 {
                                     curr?.vechile?.map((item, idx) => (

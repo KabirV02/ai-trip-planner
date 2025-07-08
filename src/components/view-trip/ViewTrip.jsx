@@ -16,9 +16,10 @@ const ViewTrip = () => {
 
     const docRef = doc(db,'AITrips',tripId);
     const docSnap = await getDoc(docRef);
-
+    
     if(docSnap.exists()){
-     
+      
+      await new Promise(res=>setTimeout(res),3000)
       setTripData(docSnap.data())
     }else{
       console.log("No such document!"); 
