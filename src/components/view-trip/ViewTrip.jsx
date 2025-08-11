@@ -31,7 +31,7 @@ const ViewTrip = () => {
   },[tripId])
 
   return (
-    <div className='md:w-fit p-5 md:p-10  md:px-20 lg:px-42 xl:px-[280px]'>
+    <div className=' md:w-[100%] p-5 md:p-10  md:px-20 lg:px-42 xl:px-[280px]'>
       {/* Infromation  */}
       <InfoSection trip={tripData}/>
       {/* Recommendation of Hotels */}
