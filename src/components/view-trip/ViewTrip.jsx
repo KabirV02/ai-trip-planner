@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '@/components/service/FirebaseConfig'
 import { useState } from 'react'
@@ -11,6 +11,7 @@ const ViewTrip = () => {
 
   const {tripId} = useParams()
   const [tripData,setTripData] = useState([])
+  const navigate = useNavigate()
 
   const getDocData = async()=>{
 
@@ -23,6 +24,7 @@ const ViewTrip = () => {
       setTripData(docSnap.data())
     }else{
       console.log("No such document!"); 
+      navigate("/", { replace: true }) 
     }
 
   }
